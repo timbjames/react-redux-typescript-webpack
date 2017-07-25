@@ -1,9 +1,11 @@
 ﻿import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { RouteComponentProps } from 'react-router';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { RouteProps } from 'react-router';
+import { BrowserRouter as Router, Route, RouteComponentProps, Link } from 'react-router-dom';
 
-interface IMatch extends RouteComponentProps<{ id: number }> { }
+interface IRouteParams extends RouteComponentProps<{ id: number }> { }
+
+class MyRoute extends Route<RouteProps> {}
 
 class Index extends React.Component<{}, {}>{
 
@@ -13,8 +15,9 @@ class Index extends React.Component<{}, {}>{
             return <div><h1>Home</h1></div>
         };
 
-        const One = (props: IMatch) => {
-            return <div><h1>One</h1></div>
+        const One = (props: IRouteParams) => {
+
+            return <div><h1>One { props.match.params && props.match.params.id }</h1></div>
         };
 
         const Two = () => {
@@ -35,9 +38,9 @@ class Index extends React.Component<{}, {}>{
 
                     <hr />
 
-                    <Route path="/" component={ Home } />
-                    <Route path="/one/:id?" component={ One } />
-                    <Route path="/two" component={ Two } />
+                    <MyRoute path="/" component={ Home } />
+                    <MyRoute path="/one/:id?" component={ One } />
+                    <MyRoute path="/two" component={ Two } />
 
                 </div>
 
