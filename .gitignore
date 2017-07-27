@@ -231,7 +231,7 @@ _Pvt_Extensions
 .fake/
 
 #==========================
-#BOSSK Specific Ignores
+#Project Specific Ignores
 #==========================
 Thumbs.db
 *.bak
@@ -240,26 +240,19 @@ Publish*/
 logs*/
 */Pdf/temp/
 */Exports
-*LeasePlan.UserFeeds*/
 
 # Generated JS files
-Installations/Manheim/wwwroot/dist
-Installations/Manheim/wwwroot/js
+SimpleTSTest/wwwroot/scripts
 
 # Generated CSS files
-Installations/Manheim/wwwroot/css/*.min.css
+SimpleTSTest/wwwroot/css/*.min.css
 
 # Generated JSON Config files
-Installations/Manheim/Properties/launchSettings.json
-Installations/Manheim/appsettings.*.generated.json
-BOSSK.Api.Svc/Properties/launchSettings.json
+SimpleTSTest/Properties/launchSettings.json
+SimpleTSTest/appsettings.*.generated.json
 
 # Generated HTML from Markdown
-Installations/Manheim/wwwroot/docs
-
-# Dependency Package Directories (JSPM & Bower)
-jspm_packages
-Installations/Manheim/wwwroot/lib
+SimpleTSTest/wwwroot/docs
 
 # logs
 npm-debug-log*
