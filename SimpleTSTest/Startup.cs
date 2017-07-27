@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace SimpleTSTest
 {
@@ -55,6 +56,14 @@ namespace SimpleTSTest
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            var options = new RewriteOptions()
+            ///.AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            //.AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&var2=$2", skipRemainingRules: true)
+            ///.AddApacheModRewrite(env.ContentRootFileProvider, "ApacheModRewrite.txt")
+            .AddIISUrlRewrite(env.ContentRootFileProvider, "IISUrlRewrite.xml");
+
+            app.UseRewriter(options);
         }
     }
 }
