@@ -9,3 +9,10 @@ export const One = (props: IRouteParams) => {
         <div><h1>Page One</h1></div>
     );
 }
+
+export const OneTwo = (props: IRouteParams) => {
+
+    return (
+        <div><h1>Page One Two</h1></div>
+    );
+}

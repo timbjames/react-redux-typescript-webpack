@@ -1,7 +1,7 @@
 ﻿import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { RouteProps } from 'react-router';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { ReduxContainerBuilder } from './Utility/Components/ReduxContainer';
 
@@ -11,7 +11,7 @@ import { rootReducer } from './Models/AreaReducer';
 
 import { TopMenu } from './App/Navigation/TopMenu';
 import { Index as HomeIndex } from './App/Views/Home/Index';
-import { One } from './App/Views/Home/One';
+import { One, OneTwo } from './App/Views/Home/One';
 import { Two } from './App/Views/Home/Two';
 import { Three } from './App/Views/Home/Three';
 
@@ -37,10 +37,14 @@ class Index extends React.Component<IReduxComponentProps, {}>{
 
                     <div className="container body-content">
 
-                        <MyRoute path="/home" component={ HomeIndex } />
-                        <MyRoute path="/one/:id?" component={ One } />
-                        <MyRoute path="/two" component={ Two } />
-                        <MyRoute path="/redux" component={ Three(areaActions, areaState) } />
+                        <Switch>
+                            <MyRoute exact path="/" component={ HomeIndex } />
+                            <MyRoute path="/one" component={One} />
+                            <MyRoute path="/one/two" component={OneTwo} />
+                            <MyRoute path="/one/two/:id?" component={OneTwo} />
+                            <MyRoute path="/two" component={ Two } />
+                            <MyRoute path="/redux" component={Three(areaActions, areaState)} />
+                        </Switch>
 
                         <hr />
 

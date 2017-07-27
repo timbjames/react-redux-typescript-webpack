@@ -21,7 +21,8 @@ export class TopMenu extends React.Component<{}, {}>{
                         <ul className="nav navbar-nav">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/one">One</Link></li>
-                            <li><Link to="/one/1">One with id</Link></li>
+                            <li><Link to="/one/two">One Two</Link></li>
+                            <li><Link to="/one/two/1">One Two with id</Link></li>
                             <li><Link to="/two">Two</Link></li>
                             <li><Link to="/redux">Redux Test</Link></li>
                         </ul>
