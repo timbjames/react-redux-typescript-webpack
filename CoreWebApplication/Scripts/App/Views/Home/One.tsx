@@ -13,6 +13,6 @@ export const One = (props: IRouteParams) => {
 export const OneTwo = (props: IRouteParams) => {
 
     return (
-        <div><h1>Page One Two</h1></div>
+        <div><h1>Page One Two { props.match.params && props.match.params.id }</h1></div>
     );
 }

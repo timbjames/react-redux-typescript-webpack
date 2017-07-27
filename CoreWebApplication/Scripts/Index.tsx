@@ -39,9 +39,9 @@ class Index extends React.Component<IReduxComponentProps, {}>{
 
                         <Switch>
                             <MyRoute exact path="/" component={ HomeIndex } />
-                            <MyRoute path="/one" component={One} />
-                            <MyRoute path="/one/two" component={OneTwo} />
-                            <MyRoute path="/one/two/:id?" component={OneTwo} />
+                            <MyRoute exact path="/one" component={One} />
+                            <MyRoute exact path="/one/two" component={OneTwo} />
+                            <MyRoute exact path="/one/two/:id?" component={OneTwo} />
                             <MyRoute path="/two" component={ Two } />
                             <MyRoute path="/redux" component={Three(areaActions, areaState)} />
                         </Switch>
@@ -49,7 +49,7 @@ class Index extends React.Component<IReduxComponentProps, {}>{
                         <hr />
 
                         <footer>
-                            <p>&copy; 2017 - SimpleTSTest</p>
+                            <p>&copy; 2017 - React Typescript Redux .Net Core Website Starter Template</p>
                         </footer>
 
                     </div>
