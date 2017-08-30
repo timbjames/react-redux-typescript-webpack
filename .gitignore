@@ -242,17 +242,17 @@ logs*/
 */Exports
 
 # Generated JS files
-SimpleTSTest/wwwroot/scripts
+CoreWebApplication/wwwroot/scripts
 
 # Generated CSS files
-SimpleTSTest/wwwroot/css/*.min.css
+CoreWebApplication/wwwroot/css/*.min.css
 
 # Generated JSON Config files
-SimpleTSTest/Properties/launchSettings.json
-SimpleTSTest/appsettings.*.generated.json
+CoreWebApplication/Properties/launchSettings.json
+CoreWebApplication/appsettings.*.generated.json
 
 # Generated HTML from Markdown
-SimpleTSTest/wwwroot/docs
+CoreWebApplication/wwwroot/docs
 
 # logs
 npm-debug-log*
